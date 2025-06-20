@@ -18,6 +18,7 @@ export async function POST(req: Request) {
     });
     return result.toDataStreamResponse();
   } catch (err) {
+    console.error(err);
     return new Response(JSON.stringify({ error: "Internal server error." }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
