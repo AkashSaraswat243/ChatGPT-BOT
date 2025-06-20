@@ -266,7 +266,7 @@ const BranchPicker: FC<BranchPickerPrimitive.Root.Props> = ({
   );
 };
 
-const CircleStopIcon = () => {
+const CircleStopIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -274,6 +274,7 @@ const CircleStopIcon = () => {
       fill="currentColor"
       width="16"
       height="16"
+      {...props}
     >
       <rect width="10" height="10" x="3" y="3" rx="2" />
     </svg>
